@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_816" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RiB-Tk-o2q">
+                                <rect key="frame" x="0.0" y="261.33333333333331" width="428" height="644.66666666666674"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJE-hK-pS3">
+                                <rect key="frame" x="0.0" y="192" width="428" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Message"/>
+                                <connections>
+                                    <action selector="buttonView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GOV-DS-Gwq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nY-mk-A4z">
+                                <rect key="frame" x="0.0" y="57" width="428" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="UBm-YQ-QJk"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Xlf-I5-n63"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7nY-mk-A4z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1G1-1j-2Xf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oJE-hK-pS3" secondAttribute="trailing" id="59q-Km-PTV"/>
+                            <constraint firstItem="oJE-hK-pS3" firstAttribute="top" secondItem="7nY-mk-A4z" secondAttribute="bottom" constant="35" id="7Ap-qD-t1G"/>
+                            <constraint firstAttribute="bottom" secondItem="RiB-Tk-o2q" secondAttribute="bottom" constant="20" id="Li3-rS-hyf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7nY-mk-A4z" secondAttribute="trailing" id="OUX-Jh-u8U"/>
+                            <constraint firstItem="7nY-mk-A4z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="TFR-Mg-Noi"/>
+                            <constraint firstAttribute="trailing" secondItem="RiB-Tk-o2q" secondAttribute="trailing" id="ZVg-kb-DzP"/>
+                            <constraint firstItem="RiB-Tk-o2q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tdM-LY-4xM"/>
+                            <constraint firstItem="RiB-Tk-o2q" firstAttribute="top" secondItem="oJE-hK-pS3" secondAttribute="bottom" constant="35" id="vof-it-FzW"/>
+                            <constraint firstItem="oJE-hK-pS3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y9q-jA-AU3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageViewview" destination="RiB-Tk-o2q" id="bfN-x7-YAa"/>
+                        <outlet property="messageLabel" destination="7nY-mk-A4z" id="F2w-r7-ZeC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.44927536231884" y="3.3482142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
