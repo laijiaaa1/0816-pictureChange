@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -14,6 +15,7 @@ class ViewController: UIViewController {
     var imageNumber = 0
     var messageNumber = 0
     var imagetotal = 5
+    var audioPlayer: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +28,53 @@ class ViewController: UIViewController {
                         "Don't let yesterday take up too much of today",
                         "You learn more from failure than from success",
                         "It's never too late to be what you might've been"]
+
+        var newMessageNumber: Int
+        repeat {
+            newMessageNumber = Int.random(in: 0...messages.count-1)
+        }while messageNumber == newMessageNumber
+        messageNumber = newMessageNumber
+        messageLabel.text = messages[messageNumber]
         
-        messageLabel.text = messages[Int.random(in:0...messages.count-1)]
-        imageViewview.image = UIImage(named: "image\(Int.random(in:0...imagetotal))")
-    
+        var newImageNUmber: Int
+        repeat {
+            newImageNUmber = Int.random(in: 0...imagetotal-1)
+        }while imageNumber == newImageNUmber
+        imageNumber = newImageNUmber
+        imageViewview.image = UIImage(named: "image\(imageNumber)")
+        
+        if let sound = NSDataAsset(name: "sound0"){
+            do{
+                try audioPlayer = AVAudioPlayer(data: sound.data)
+                audioPlayer.play()
+            }catch{
+                print("😡 ERROR: \(error.localizedDescription)could not read data from file sound0")
+            }
+        }else{
+            print("ERROR: could not read data from file sound0")
+        }
         
         
         
+        
+//       4.0
+//        var newMessage = messages[Int.random(in: 0...messages.count-1)]
+//        while messageLabel.text == newMessage{
+//            print("*** we had a repeating value. Both newMessage and messageLabel.text=\(newMessage) and \(messageLabel.text!)")
+//            newMessage = messages[Int.random(in: 0...messages.count-1)]
+//        }
+//        messageLabel.text = newMessage
+//        imageViewview.image = UIImage(named: "image\(Int.random(in:0...imagetotal))")
+//
+        
+        
+//       3.0
+//        messageLabel.text = messages[Int.random(in:0...messages.count-1)]
+//        imageViewview.image = UIImage(named: "image\(Int.random(in:0...imagetotal))")
+//
+        
+        
+//       2.0
 //        messageLabel.text = messages[messageNumber]
 //        messageNumber += 1
 //        if messageNumber == messages.count {
@@ -50,7 +92,7 @@ class ViewController: UIViewController {
         
         
         
-        
+//        1.0
 //        let awscomemessage = "You Are Awesome!"
 //
 //        if messageLabel.text == awscomemessage {
