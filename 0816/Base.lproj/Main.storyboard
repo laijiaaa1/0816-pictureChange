@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RiB-Tk-o2q">
-                                <rect key="frame" x="0.0" y="261.33333333333331" width="428" height="644.66666666666674"/>
+                                <rect key="frame" x="0.0" y="261" width="428" height="645"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJE-hK-pS3">
-                                <rect key="frame" x="0.0" y="192" width="428" height="34.333333333333343"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJE-hK-pS3">
+                                <rect key="frame" x="0.0" y="192" width="428" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Show Message"/>
                                 <connections>
@@ -37,11 +37,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Play sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imb-eS-Y71">
+                                <rect key="frame" x="20" y="199" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2kr-pe-Hmy">
+                                <rect key="frame" x="112" y="194" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="playSoundToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="aLA-BD-ckA"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7nY-mk-A4z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1G1-1j-2Xf"/>
+                            <constraint firstItem="oJE-hK-pS3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3PN-B7-Lk3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oJE-hK-pS3" secondAttribute="trailing" id="59q-Km-PTV"/>
                             <constraint firstItem="oJE-hK-pS3" firstAttribute="top" secondItem="7nY-mk-A4z" secondAttribute="bottom" constant="35" id="7Ap-qD-t1G"/>
                             <constraint firstAttribute="bottom" secondItem="RiB-Tk-o2q" secondAttribute="bottom" constant="20" id="Li3-rS-hyf"/>
@@ -56,11 +71,12 @@
                     <connections>
                         <outlet property="imageViewview" destination="RiB-Tk-o2q" id="bfN-x7-YAa"/>
                         <outlet property="messageLabel" destination="7nY-mk-A4z" id="F2w-r7-ZeC"/>
+                        <outlet property="playSoundSwitch" destination="2kr-pe-Hmy" id="6Rh-Hl-2SQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101.44927536231884" y="3.3482142857142856"/>
+            <point key="canvasLocation" x="100.93457943925233" y="3.2397408207343417"/>
         </scene>
     </scenes>
     <resources>
